@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/layout-test/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chat</title>
+  <script type="module" crossorigin src="/layout-test/assets/index-BYPCn-qW.js"></script>
+  <link rel="stylesheet" crossorigin href="/layout-test/assets/index-C0yh_GMz.css">
+</head>
+
+<body>
+  <main class="page-layout">
+    <aside id="left-panel" class="page-layout__side-panel side-panel hideable border-simple">
+      <button id="left-panel-toggler" class="btn-toggle">
+        &lt;
+      </button>
+      <div class="side-panel__item widgets">
+        <div class="widgets__widget">
+          Виджет 1
+        </div>
+        <div class="widgets__widget">
+          Виджет 2
+        </div>
+        <div class="widgets__widget">
+          Виджет 3
+        </div>
+      </div>
+      <footer class="side-panel__item">
+        <div class="btn-group btn-group--stretch">
+          <a class="btn btn--icon-only btn--slim" target="_blank" rel="noopener noreferrer" title="Телеграм"
+            href="https://telegram.org/">
+            <svg class="icon icon--dark" width="24" height="24" viewBox="0 0 24 24">
+              <use href="/layout-test/assets/social-icons-5gFb52Ow.svg#telegram"></use>
+            </svg>
+          </a>
+          <a class="btn btn--icon-only btn--slim" target="_blank" rel="noopener noreferrer" title="Вконтакте"
+            href="https://vk.com/">
+            <svg class="icon icon--dark" width="24" height="24" viewBox="0 0 24 24">
+              <use href="/layout-test/assets/social-icons-5gFb52Ow.svg#vk"></use>
+            </svg></a>
+        </div>
+      </footer>
+    </aside>
+    <div class="page-layout__content">
+      <header class="main-nav border-curved">
+        <nav class="btn-group btn-group--align-start btn-group--secondary main-nav__group">
+          <button class="btn">
+            <svg class="icon icon--centered" width="16" height="16" viewBox="0 0 16 16">
+              <use href="/layout-test/assets/interface-icons-CUiwANGK.svg#questions"></use>
+            </svg>
+          </button>
+          <button class="btn">
+            <svg class="icon icon--centered" width="16" height="16" viewBox="0 0 16 16">
+              <use href="/layout-test/assets/interface-icons-CUiwANGK.svg#people"></use>
+            </svg>
+          </button>
+        </nav>
+
+        <nav class="btn-group btn-group--justify-end main-nav__group block-small-padding">
+          <button class="btn">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </button>
+          <select class="custom-select" name="some-select" id="some-select">
+            <button>
+              <selectedcontent> </selectedcontent>
+              <span class="dropdown-mark">&gt;</span>
+            </button>
+            <option value="number1">
+              <svg class="icon" width="16" height="16" aria-hidden viewBox="0 0 24 24">
+                <use href="/src/images/social-icons.svg#telegram"></use>
+              </svg><span class="select-text">Телеграм</span>
+            </option>
+            <option value="number2">
+              <svg class="icon" width="16" height="16" aria-hidden viewBox="0 0 24 24">
+                <use href="/src/images/social-icons.svg#vk"></use>
+              </svg><span class="select-text">Вконтакте</span>
+            </option>
+          </select>
+          <button class="btn">
+            <svg class="icon" width="16" height="16" viewBox="0 0 16 16">
+              <use href="/layout-test/assets/interface-icons-CUiwANGK.svg#chat"></use>
+            </svg>
+          </button>
+        </nav>
+        <div class="border-curved__item"></div>
+        <div class="border-curved__item"></div>
+      </header>
+    </div>
+    <aside id="right-panel" class="page-layout__side-panel side-panel hideable border-gradient">
+      <button id="right-panel-toggler" class="btn-toggle btn-toggle--right">
+        &gt; </button>
+      <header class="centered-content">
+        <svg class="icon" width="16" height="16" viewBox="0 0 16 16">
+          <use href="/layout-test/assets/interface-icons-CUiwANGK.svg#history"></use>
+        </svg>
+      </header>
+    </aside>
+  </main>
+</body>
+
+</html>
