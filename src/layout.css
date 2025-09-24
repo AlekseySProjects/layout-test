@@ -1,0 +1,100 @@
+.page-layout {
+  max-width: 1440px;
+  margin-inline: auto;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.page-layout__content,
+.page-layout__side-panel {
+  height: 100%;
+}
+
+.page-layout__content {
+  width: 100%;
+  transition: all .3s ease-in-out;
+}
+
+.page-layout__side-panel + .page-layout__content {
+  --has-left-panel: 1;
+
+  margin-left: var(--side-panel-width);
+}
+
+.page-layout__content:has(+ .page-layout__side-panel) {
+  width: calc(100% - var(--side-panel-width) - var(--side-panel-width) * var(--has-left-panel, 0));
+}
+
+.page-layout__side-panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #1f212c;
+  width: var(--side-panel-width);
+  z-index: 2;
+  transition: all .3s ease-in-out;
+  transform: translateX(0);
+}
+
+.page-layout__content + .page-layout__side-panel {
+  left: auto;
+  right: 0;
+}
+
+.btn-toggle {
+  font-family: monospace;
+  font-size: .75em;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: calc(100% + var(--border-width));
+  height: var(--left-panel-hide-btn-height);
+  min-width: calc(var(--btn-min-size) / 2);
+  padding: 0;
+  background-color: var(--bg-dark);
+  border-radius: 0 var(--border-radius) var(--border-radius) 0;
+}
+
+.btn-toggle--right {
+  left: auto;
+  right: calc(100% + var(--border-width));
+  border-radius: var(--border-radius) 0  0 var(--border-radius);
+  height: calc(var(--left-panel-hide-btn-height) + var(--inline-small-padding) * 2);
+}
+
+.page-layout__side-panel.hideable .btn-toggle {
+  display: block;
+}
+
+@media (hover: hover) {
+  .btn-toggle {
+    transition-timing-function: ease-out;
+  }
+
+  .btn-toggle:hover {
+    padding-inline: 1em;
+  }
+}
+
+@media screen and (width >= 960px) {
+  .left-panel-hidden .page-layout__side-panel + .page-layout__content {
+    --has-left-panel: 0;
+
+    margin-left: 0;
+    transition: all .3s ease-in-out;
+  }
+
+  .left-panel-hidden #left-panel {
+    transform: translateX(-100%);
+    transition: all .3s ease-in-out;
+  }
+
+  .right-panel-hidden .page-layout__content:has(+ .page-layout__side-panel) {
+    width: calc(100% - var(--side-panel-width) * var(--has-left-panel, 0));
+  }
+
+  .right-panel-hidden #right-panel {
+    transform: translateX(100%);
+  }
+}

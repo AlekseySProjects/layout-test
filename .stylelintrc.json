@@ -1,0 +1,15 @@
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "alpha-value-notation": "number",
+    "selector-class-pattern": null,
+    "declaration-property-value-no-unknown": [
+      true,
+      {
+        "ignoreProperties": {
+          "appearance": ["base-select"]
+        }
+      }
+    ]
+  }
+}
